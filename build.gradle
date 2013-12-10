@@ -17,4 +17,10 @@ dependencies {
 	compile 'org.springframework:spring-beans:3.2.2.RELEASE'
 }
 
+run {
+    if ( project.hasProperty('args') ) {
+        args project.args.split('\\s+')
+    }
+}
+
 mainClassName = 'ws.deathmatch.App'

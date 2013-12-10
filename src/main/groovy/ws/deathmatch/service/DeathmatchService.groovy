@@ -8,7 +8,7 @@ import org.springframework.ws.client.core.WebServiceTemplate;
 @Service
 class DeathmatchService {
 	
-	@Value('${deathmatch.soap.uri}')
+	@Value('http://localhost:8080/deathmatch-ws/service')
 	private String uri
 	
 	@Autowired

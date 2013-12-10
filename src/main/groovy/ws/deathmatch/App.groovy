@@ -18,7 +18,7 @@ class App {
 			cli.usage();
 		} else {
 			
-			def ctx = new ClassPathXmlApplicationContext('application-context.xml')
+			def ctx = new ClassPathXmlApplicationContext('applicationContext.xml')
 			def service = ctx.getBean(DeathmatchService.class)
 			
 			println service.sendAndReceive( opts.cmd )	
