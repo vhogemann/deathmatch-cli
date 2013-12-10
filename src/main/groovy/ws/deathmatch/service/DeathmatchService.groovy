@@ -11,7 +11,7 @@ import ws.deathmatch.xml.DeathmatchRequest;
 @Service
 class DeathmatchService {
 	
-	@Value('http://localhost:8080/deathmatch-ws/soap/service')
+	@Value('http://172.20.19.161:8080/deathmatch-ws/soap/service')
 	private String uri
 	
 	@Autowired
