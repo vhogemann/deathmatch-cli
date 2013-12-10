@@ -10,7 +10,9 @@ class App {
 		
 		def cli = new CliBuilder(usage: 'deathmatch-cli')
 		
-		cli.cmd( args: 1, argName: 'cmd', 'One of INSERTCOIN, WALK, UP, DOWN, LEFT or RIGHT' )
+		cli.cmd( args: 1, argName: 'cmd', 'One of INSERTCOIN, SHOOT, WALK, UP, DOWN, LEFT or RIGHT' )
+		cli.player( args: 1, argName: 'player', '' )
+		
 		
 		def opts = cli.parse(args)
 		
