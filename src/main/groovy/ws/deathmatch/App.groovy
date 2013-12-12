@@ -3,6 +3,8 @@ package ws.deathmatch
 import org.springframework.context.support.ClassPathXmlApplicationContext
 
 import ws.deathmatch.service.DeathmatchService;
+import ws.deathmatch.xml.DeathmatchResponse;
+import ws.deathmatch.xml.DeathmatchResponse.Player;
 
 class App {
 	
@@ -23,7 +25,13 @@ class App {
 			def ctx = new ClassPathXmlApplicationContext('applicationContext.xml')
 			def service = ctx.getBean(DeathmatchService.class)
 			
-			println service.sendAndReceive( opts.cmd )	
+			DeathmatchResponse resp = service.sendAndReceive( opts.cmd )
+			
+			for( Player player : resp.player ){
+				
+				println "Player: ${player.id}"
+				
+			}
 				
 		}
 		
